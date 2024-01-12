@@ -13,6 +13,7 @@ namespace App.GUI
         [Obsolete]
         private void button1_Click(object sender, EventArgs e)
         {
+            // username = id
             string username = this.textBox1.Text;
             string password = this.textBox2.Text;
 
@@ -44,7 +45,7 @@ namespace App.GUI
                             fNV.ShowDialog();
                             break;
                         case "QTV":
-                            QuanTriVienGUI fQTV = new QuanTriVienGUI();
+                            QuanTriVienGUI fQTV = new QuanTriVienGUI(username);
                             fQTV.ShowDialog();
                             break;
                         default:
