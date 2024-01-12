@@ -30,9 +30,13 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            checkBox1 = new CheckBox();
+            button2 = new Button();
             button1 = new Button();
             label5 = new Label();
             panel1 = new Panel();
+            textBox4 = new TextBox();
+            label6 = new Label();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
@@ -43,10 +47,14 @@
             dateTimePicker1 = new DateTimePicker();
             dataGridView1 = new DataGridView();
             tabPage2 = new TabPage();
+            button3 = new Button();
+            dataGridView2 = new DataGridView();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -56,11 +64,13 @@
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(776, 426);
+            tabControl1.Size = new Size(1040, 426);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(checkBox1);
+            tabPage1.Controls.Add(button2);
             tabPage1.Controls.Add(button1);
             tabPage1.Controls.Add(label5);
             tabPage1.Controls.Add(panel1);
@@ -70,10 +80,31 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(768, 398);
+            tabPage1.Size = new Size(1032, 398);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Đặt lịch hẹn";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(6, 370);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(141, 25);
+            checkBox1.TabIndex = 7;
+            checkBox1.Text = "Xử lý tranh chấp";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.AutoSize = true;
+            button2.Location = new Point(253, 361);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 31);
+            button2.TabIndex = 6;
+            button2.Text = "Refresh";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -84,11 +115,12 @@
             button1.TabIndex = 5;
             button1.Text = "Đặt lịch";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(9, 182);
+            label5.Location = new Point(10, 228);
             label5.Name = "label5";
             label5.Size = new Size(50, 21);
             label5.TabIndex = 3;
@@ -96,6 +128,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(label6);
             panel1.Controls.Add(textBox3);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(textBox1);
@@ -105,8 +139,24 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(6, 6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(406, 168);
+            panel1.Size = new Size(406, 210);
             panel1.TabIndex = 2;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(68, 162);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(335, 29);
+            textBox4.TabIndex = 8;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(3, 162);
+            label6.Name = "label6";
+            label6.Size = new Size(28, 21);
+            label6.TabIndex = 7;
+            label6.Text = "ID:";
             // 
             // textBox3
             // 
@@ -169,38 +219,67 @@
             // 
             dateTimePicker1.CustomFormat = "dd/mm/yyyy  hh:mm";
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(65, 176);
+            dateTimePicker1.Location = new Point(74, 222);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(170, 29);
             dateTimePicker1.TabIndex = 1;
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(418, 6);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(344, 386);
+            dataGridView1.Size = new Size(608, 386);
             dataGridView1.TabIndex = 0;
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(button3);
+            tabPage2.Controls.Add(dataGridView2);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(768, 398);
+            tabPage2.Size = new Size(1032, 398);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Lịch đã đặt";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.AutoSize = true;
+            button3.Location = new Point(951, 365);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 31);
+            button3.TabIndex = 7;
+            button3.Text = "Refresh";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.AllowUserToDeleteRows = false;
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(6, 6);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.Size = new Size(1020, 353);
+            dataGridView2.TabIndex = 0;
             // 
             // KhachHangGUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1064, 450);
             Controls.Add(tabControl1);
             Name = "KhachHangGUI";
-            Text = "Form1";
+            Text = "KhachHangGUI";
             FormClosing += KhachHangGUI_FormClosing;
             Load += KhachHangGUI_Load;
             tabControl1.ResumeLayout(false);
@@ -209,6 +288,9 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -229,5 +311,11 @@
         private TextBox textBox1;
         private Label label5;
         private Button button1;
+        private TextBox textBox4;
+        private Label label6;
+        private Button button2;
+        private Button button3;
+        private DataGridView dataGridView2;
+        private CheckBox checkBox1;
     }
 }

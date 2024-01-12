@@ -22,7 +22,7 @@ namespace App.DAO
 
         [Obsolete]
         // Dùng cho SELECT (trả về dạng bảng)
-        public DataTable ExecuteQuery(string query, object[] parameter = null)
+        public DataTable ExecuteQuery(string query, object[]? parameter = null)
         {
             DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connStr))
@@ -59,7 +59,7 @@ namespace App.DAO
 
         [Obsolete]
         // Dùng cho INSERT, UPDATE, DELETE (trả về số dòng thực thi thành công) 
-        public int ExecuteNonQuery(string query, object[] parameter = null)
+        public int ExecuteNonQuery(string query, object[]? parameter = null)
         {
             int data = 0;
             using (SqlConnection connection = new SqlConnection(connStr))
@@ -79,8 +79,19 @@ namespace App.DAO
                         }
                     }
                 }
-                data = command.ExecuteNonQuery();
-                connection.Close();
+                // setting to don't break when get user_unhandled
+                try
+                {
+                    data = command.ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                } 
+                finally
+                { 
+                    connection.Close();
+                }
             }
             return data;
         }
