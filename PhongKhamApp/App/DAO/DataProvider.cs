@@ -13,14 +13,17 @@ namespace App.DAO
         private static DataProvider instance;
         public static DataProvider Instance
         {
-            get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
+            get { 
+                if (instance == null) instance = new DataProvider(); 
+               return DataProvider.instance; 
+            }
             private set => instance = value;
         }
         private DataProvider() { }
 
-        string connStr = "Server=localhost; Database=phongkham; Integrated Security=True;";
+        string connStr = "Server=LAPTOP-4D049S1C\\SQLEXPRESS; Database=phongkham; Integrated Security=True;";
 
-        [Obsolete]
+        [Obsolete] 
         // Dùng cho SELECT (trả về dạng bảng)
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
@@ -84,5 +87,29 @@ namespace App.DAO
             }
             return data;
         }
-    }
+
+		public SqlDataReader ExecuteProcedure(string procedureName, object[] parameter = null)
+		{
+			SqlConnection connection = new SqlConnection(connStr);
+			connection.Open();
+			SqlCommand command = new SqlCommand(procedureName, connection);
+			command.CommandType = CommandType.StoredProcedure;
+			if (parameter != null)
+			{
+				int i = 0;
+				foreach (object item in parameter)
+				{
+					if (item.ToString().Contains('@'))
+					{
+						command.Parameters.AddWithValue(item.ToString(), parameter[i + 1]);
+						i += 2;
+					}
+				}
+			}
+			SqlDataReader reader = command.ExecuteReader();
+			return reader;
+		}
+
+
+	}
 }

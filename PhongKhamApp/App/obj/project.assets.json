@@ -470,19 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\phamt\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\phamt\\Desktop\\hcmus\\4\\4-1\\hqt\\doan-source\\hqt-phong-kham\\PhongKhamApp\\App\\App.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\1TaiLieuHCMUS\\HK7_Seft\\HQTCSDL\\Project\\hqt-phong-kham\\PhongKhamApp\\App\\App.csproj",
       "projectName": "App",
-      "projectPath": "C:\\Users\\phamt\\Desktop\\hcmus\\4\\4-1\\hqt\\doan-source\\hqt-phong-kham\\PhongKhamApp\\App\\App.csproj",
-      "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\phamt\\Desktop\\hcmus\\4\\4-1\\hqt\\doan-source\\hqt-phong-kham\\PhongKhamApp\\App\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\1TaiLieuHCMUS\\HK7_Seft\\HQTCSDL\\Project\\hqt-phong-kham\\PhongKhamApp\\App\\App.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\1TaiLieuHCMUS\\HK7_Seft\\HQTCSDL\\Project\\hqt-phong-kham\\PhongKhamApp\\App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\phamt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -532,7 +532,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

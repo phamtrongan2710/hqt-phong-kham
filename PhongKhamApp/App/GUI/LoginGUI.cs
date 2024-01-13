@@ -42,6 +42,7 @@ namespace App.GUI
                         case "Nhân viên":
                             NhanVienGUI fNV = new NhanVienGUI();
                             fNV.ShowDialog();
+
                             break;
                         case "QTV":
                             QuanTriVienGUI fQTV = new QuanTriVienGUI();
@@ -51,7 +52,6 @@ namespace App.GUI
                             MessageBox.Show("Tài khoản hiện không khả dụng.");
                             break;
                     }
-
                 }
                 else
                 {
