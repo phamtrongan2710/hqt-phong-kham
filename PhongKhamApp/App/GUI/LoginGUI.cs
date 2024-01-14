@@ -37,7 +37,7 @@ namespace App.GUI
                     switch (role)
                     {
                         case "Nha sĩ":
-                            NhaSiGUI fNS = new NhaSiGUI();
+                            NhaSiGUI fNS = new NhaSiGUI(username);
                             fNS.ShowDialog();
                             break;
                         case "Nhân viên":
