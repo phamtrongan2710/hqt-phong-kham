@@ -48,5 +48,12 @@ namespace App.DAO
             string query = string.Format($"SELECT * FROM LICH_HEN WHERE MAKH = '{maKH}'");
             return DataProvider.Instance.ExecuteQuery(query);    
         }
+
+        [Obsolete]
+        public int CapNhatLichHen(string procedure, string maLH, string ngayKham, string gioKham, string maKH)
+        {
+            string query = string.Format($"EXEC {procedure} '{maLH}', '{ngayKham}', '{gioKham}', '{maKH}'");
+            return DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }
