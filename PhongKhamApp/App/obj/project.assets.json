@@ -470,19 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\phamt\\.nuget\\packages\\": {}
+    "C:\\Users\\Minh Tri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\phamt\\Desktop\\hcmus\\4\\4-1\\hqt\\doan-source\\hqt-phong-kham\\PhongKhamApp\\App\\App.csproj",
+      "projectUniqueName": "C:\\Users\\Minh Tri\\source\\repos\\hqt-phong-kham\\PhongKhamApp\\App\\App.csproj",
       "projectName": "App",
-      "projectPath": "C:\\Users\\phamt\\Desktop\\hcmus\\4\\4-1\\hqt\\doan-source\\hqt-phong-kham\\PhongKhamApp\\App\\App.csproj",
-      "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\phamt\\Desktop\\hcmus\\4\\4-1\\hqt\\doan-source\\hqt-phong-kham\\PhongKhamApp\\App\\obj\\",
+      "projectPath": "C:\\Users\\Minh Tri\\source\\repos\\hqt-phong-kham\\PhongKhamApp\\App\\App.csproj",
+      "packagesPath": "C:\\Users\\Minh Tri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Minh Tri\\source\\repos\\hqt-phong-kham\\PhongKhamApp\\App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\phamt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Minh Tri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -532,7 +532,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
