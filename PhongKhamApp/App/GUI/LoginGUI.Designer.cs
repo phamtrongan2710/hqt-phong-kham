@@ -31,10 +31,10 @@
             label2 = new Label();
             panel1 = new Panel();
             panel3 = new Panel();
-            textBox2 = new TextBox();
+            passwordTextBox = new TextBox();
             label4 = new Label();
             panel2 = new Panel();
-            textBox1 = new TextBox();
+            usernameTextBox = new TextBox();
             label3 = new Label();
             button1 = new Button();
             label1 = new Label();
@@ -53,7 +53,7 @@
             label2.Size = new Size(202, 17);
             label2.TabIndex = 12;
             label2.Text = "Chưa có tài khoản? Đăng ký ngay";
-            label2.Click += label2_Click;
+            label2.Click += RegisterLabel_Click;
             // 
             // panel1
             // 
@@ -66,7 +66,7 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(textBox2);
+            panel3.Controls.Add(passwordTextBox);
             panel3.Controls.Add(label4);
             panel3.Location = new Point(50, 96);
             panel3.Name = "panel3";
@@ -75,11 +75,11 @@
             // 
             // textBox2
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(83, 5);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(239, 29);
-            textBox2.TabIndex = 1;
+            passwordTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordTextBox.Location = new Point(83, 5);
+            passwordTextBox.Name = "textBox2";
+            passwordTextBox.Size = new Size(239, 29);
+            passwordTextBox.TabIndex = 1;
             // 
             // label4
             // 
@@ -93,7 +93,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(usernameTextBox);
             panel2.Controls.Add(label3);
             panel2.Location = new Point(50, 50);
             panel2.Name = "panel2";
@@ -102,11 +102,11 @@
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(83, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(239, 29);
-            textBox1.TabIndex = 1;
+            usernameTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            usernameTextBox.Location = new Point(83, 5);
+            usernameTextBox.Name = "textBox1";
+            usernameTextBox.Size = new Size(239, 29);
+            usernameTextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -128,7 +128,7 @@
             button1.Text = "Đăng nhập";
             button1.TextAlign = ContentAlignment.BottomCenter;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += LoginButton_Click;
             // 
             // label1
             // 
@@ -169,10 +169,10 @@
         private Label label2;
         private Panel panel1;
         private Panel panel3;
-        private TextBox textBox2;
+        private TextBox passwordTextBox;
         private Label label4;
         private Panel panel2;
-        private TextBox textBox1;
+        private TextBox usernameTextBox;
         private Label label3;
         private Button button1;
         private Label label1;

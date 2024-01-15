@@ -1,60 +1,103 @@
 ﻿namespace App.GUI
 {
-    partial class NhaSiGUI
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class NhaSiGUI
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            label1 = new Label();
-            SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(342, 88);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "nha si";
-            // 
-            // NhaSiGUI
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
-            Name = "NhaSiGUI";
-            Text = "NhaSiGUI";
-            FormClosing += NhaSiGUI_FormClosing;
-            ResumeLayout(false);
-            PerformLayout();
-        }
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			components = new System.ComponentModel.Container();
+			label1 = new Label();
+			LichHenDataList = new DataGridView();
+			contextMenuStrip1 = new ContextMenuStrip(components);
+			editToolStripMenuItem = new ToolStripMenuItem();
+			((System.ComponentModel.ISupportInitialize)LichHenDataList).BeginInit();
+			contextMenuStrip1.SuspendLayout();
+			SuspendLayout();
+			// 
+			// label1
+			// 
+			label1.AutoSize = true;
+			label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+			label1.Location = new Point(371, 25);
+			label1.Name = "label1";
+			label1.Size = new Size(134, 41);
+			label1.TabIndex = 2;
+			label1.Text = "Lịch hẹn";
+			// 
+			// LichHenDataList
+			// 
+			LichHenDataList.AllowUserToAddRows = false;
+			LichHenDataList.AllowUserToDeleteRows = false;
+			LichHenDataList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			LichHenDataList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			LichHenDataList.Location = new Point(12, 90);
+			LichHenDataList.Name = "LichHenDataList";
+			LichHenDataList.ReadOnly = true;
+			LichHenDataList.RowHeadersWidth = 51;
+			LichHenDataList.RowTemplate.Height = 29;
+			LichHenDataList.Size = new Size(890, 249);
+			LichHenDataList.TabIndex = 3;
+			LichHenDataList.CellMouseDown += LichHenDataList_CellMouseDown;
+			LichHenDataList.MouseClick += LichHenDataList_MouseClick;
+			// 
+			// contextMenuStrip1
+			// 
+			contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+			contextMenuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem });
+			contextMenuStrip1.Name = "contextMenuStrip1";
+			contextMenuStrip1.Size = new Size(211, 56);
+			// 
+			// editToolStripMenuItem
+			// 
+			editToolStripMenuItem.Name = "editToolStripMenuItem";
+			editToolStripMenuItem.Size = new Size(210, 24);
+			editToolStripMenuItem.Text = "Chỉnh sửa...";
+			editToolStripMenuItem.Click += editToolStripMenuItem_Click;
+			// 
+			// NhaSiGUI
+			// 
+			AutoScaleDimensions = new SizeF(8F, 20F);
+			AutoScaleMode = AutoScaleMode.Font;
+			ClientSize = new Size(914, 600);
+			Controls.Add(LichHenDataList);
+			Controls.Add(label1);
+			Margin = new Padding(3, 4, 3, 4);
+			Name = "NhaSiGUI";
+			Text = "NhaSiGUI";
+			FormClosing += NhaSiGUI_FormClosing;
+			((System.ComponentModel.ISupportInitialize)LichHenDataList).EndInit();
+			contextMenuStrip1.ResumeLayout(false);
+			ResumeLayout(false);
+			PerformLayout();
+		}
 
-        #endregion
-
-        private Label label1;
-    }
+		#endregion
+		private Label label1;
+		private DataGridView LichHenDataList;
+		private ContextMenuStrip contextMenuStrip1;
+		private ToolStripMenuItem editToolStripMenuItem;
+	}
 }

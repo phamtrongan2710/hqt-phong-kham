@@ -397,3 +397,7 @@ InteropTests/NativeTests/out
 /PhongKhamApp/App/obj/Debug/net6.0-windows/apphost.exe
 /PhongKhamApp/App/obj/project.assets.json
 /PhongKhamApp/App/obj/project.nuget.cache
+/PhongKhamApp/.vs/PhongKhamApp/DesignTimeBuild/.dtbcache.v2
+/PhongKhamApp/.vs/PhongKhamApp/v17/.futdcache.v2
+/PhongKhamApp/App/obj/Debug/net6.0-windows/ref/App.dll
+/PhongKhamApp/App/obj/Debug/net6.0-windows/refint/App.dll
